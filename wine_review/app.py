@@ -28,6 +28,12 @@ engine = create_engine(f"sqlite:///{dbfile}")
 
 session = Session(engine)
 
+Base = automap_base()
+# reflect the tables
+Base.prepare(engine, reflect=True)
+# Save references to each table
+wine_reviews = Base.classes.reviews 
+
 # @app.before_first_request
 # def setup():
 #     db.create_all()
