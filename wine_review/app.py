@@ -16,6 +16,18 @@ app = Flask(__name__)
 #################################################
 dbfile = os.path.join('raw_data/wine_reviews.sqlite')
 engine = create_engine(f"sqlite:///{dbfile}")
+
+from flask_sqlalchemy import SQLAlchemy
+app.config['SQLALCHEMY_DATABASE_URI']=os.environ.get("DATABASE_URL","") or "sqlite:///raw_data/wine_reviews.sqlite"
+
+db=SQLAlchemy(app)
+
+# @app.before_first_request
+# def setup():
+#     db.create_all()
+
+# dbfile = os.path.join('raw_data/wine_reviews.sqlite')
+# engine = create_engine(f"sqlite:///{dbfile}")
 # reflect an existing database into a new model
 Base = automap_base()
 # reflect the tables
