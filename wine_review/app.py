@@ -25,7 +25,7 @@ from flask_sqlalchemy import SQLAlchemy
 db=SQLAlchemy(app)
 
 # Create our session (link) from Python to the Database
-# session = Session(engine)
+session = Session(engine)
 
 # @app.before_first_request
 # def setup():
