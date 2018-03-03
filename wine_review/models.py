@@ -5,6 +5,10 @@ from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine,func
 
+import os
+import numpy as np
+import pandas as pd
+
 dbfile = os.path.join('raw_data/wine_reviews.sqlite')
 engine = create_engine(f"sqlite:///{dbfile}")
 
