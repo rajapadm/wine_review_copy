@@ -26,5 +26,4 @@ numpy==1.13.1
 pandas==0.20.3
 SQLAlchemy==1.1.13
 anaconda-client==1.2.2
-anaconda-navigator==1.6.8
 anaconda-project==0.8.0
