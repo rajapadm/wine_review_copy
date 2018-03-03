@@ -19,13 +19,13 @@ app = Flask(__name__)
 
 from flask_sqlalchemy import SQLAlchemy
 #app.config['SQLALCHEMY_DATABASE_URI']=os.environ.get("DATABASE_URL","") or "sqlite:///./raw_data/wine_reviews.sqlite"
-print("App configuration Before Line")
-app.config['SQLALCHEMY_DATABASE_URI']="sqlite:///./raw_data/wine_reviews.sqlite"
+
+# app.config['SQLALCHEMY_DATABASE_URI']="sqlite:///./raw_data/wine_reviews.sqlite"
 
 db=SQLAlchemy(app)
 
 # Create our session (link) from Python to the Database
-session = Session(engine)
+# session = Session(engine)
 
 # @app.before_first_request
 # def setup():

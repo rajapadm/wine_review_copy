@@ -16,3 +16,5 @@ Base = automap_base()
 Base.prepare(engine, reflect=True)
 # Save references to each table
 wine_reviews = Base.classes.reviews 
+# Create our session (link) from Python to the Database
+session = Session(engine)
