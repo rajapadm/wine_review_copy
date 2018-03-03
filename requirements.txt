@@ -27,3 +27,4 @@ pandas==0.20.3
 SQLAlchemy==1.1.13
 anaconda-client==1.2.2
 anaconda-project==0.8.2
+Flask-SQLAlchemy==2.1
