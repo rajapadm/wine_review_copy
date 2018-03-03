@@ -14,8 +14,8 @@ app = Flask(__name__)
 #################################################
 # Database Setup
 #################################################
-dbfile = os.path.join('raw_data/wine_reviews.sqlite')
-engine = create_engine(f"sqlite:///{dbfile}")
+# dbfile = os.path.join('raw_data/wine_reviews.sqlite')
+# engine = create_engine(f"sqlite:///{dbfile}")
 
 from flask_sqlalchemy import SQLAlchemy
 #app.config['SQLALCHEMY_DATABASE_URI']=os.environ.get("DATABASE_URL","") or "sqlite:///./raw_data/wine_reviews.sqlite"
@@ -26,13 +26,13 @@ from flask_sqlalchemy import SQLAlchemy
 
 # Create our session (link) from Python to the Database
 
-session = Session(engine)
+# session = Session(engine)
 
-Base = automap_base()
-# reflect the tables
-Base.prepare(engine, reflect=True)
-# Save references to each table
-wine_reviews = Base.classes.reviews 
+# Base = automap_base()
+# # reflect the tables
+# Base.prepare(engine, reflect=True)
+# # Save references to each table
+# wine_reviews = Base.classes.reviews 
 
 # @app.before_first_request
 # def setup():
