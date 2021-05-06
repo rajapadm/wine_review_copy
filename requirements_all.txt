@@ -43,7 +43,7 @@ fastcache==1.0.2
 filelock==2.0.12
 flake8==3.5.0
 Flask==0.12.2
-Flask-Cors==3.0.3
+Flask-Cors==3.0.9
 Flask-PyMongo==0.5.1
 Flask-SQLAlchemy==2.3.2
 gevent==1.2.2
